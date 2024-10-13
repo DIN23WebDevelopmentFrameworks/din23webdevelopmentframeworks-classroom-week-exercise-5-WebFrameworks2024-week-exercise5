@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 interface IRecipeTagProps {
   tagName: string;
@@ -7,10 +7,11 @@ interface IRecipeTagProps {
 
 const RecipeTag: React.FC<IRecipeTagProps> = ({ tagName, onSelectTag }) => {
   return (
-    <li onClick={() => onSelectTag(tagName)}>
-      <button>{tagName}</button>
+    <li onClick={() => onSelectTag(tagName)} style={{ cursor: 'pointer', listStyleType: 'none', margin: '5px 0' }}>
+      {tagName}
     </li>
   );
 };
 
 export default RecipeTag;
+// done
